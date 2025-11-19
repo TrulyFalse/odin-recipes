@@ -2,44 +2,174 @@
     box-sizing: border-box;
 }
 
+html{
+    /* using browser default font-size for root element, 
+    as it allows font-size-based accessibility user settings to remain effective.
+    (otherwise it is overriden if you set a value here) */
+}
+
 body {
-    background-color: hsl(0,0%,20%);
+    margin: 0;    
+    background-color: hsl(120, 30%, 20%);
+    /*
+    background-image: url(../img/index-bg-2.avif);
+    background-size: cover;
+    */
 }
 
 h1 {
+    margin-top: 4rem;
+    font-size: 3.5rem;
     text-align: center;
     color: hsl(50, 60%, 60%);
 }
 
+#top-panel{
+    z-index: 99;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: hsl(0,0%,10%);
+}
+
+#top-panel input[type=text]{
+    padding: 0.5rem 1rem;
+    color: hsl(50, 100%, 66%);
+    background-color: hsl(0,0%,20%);
+    border: 2px hsl(0,0%,40%) solid;
+    border-radius: 1.5rem;
+    width: 50%;
+    max-width: 400px;
+    height: 2.5rem;
+    caret-color: hsl(0,0%,40%);
+}
+
+#top-panel input[type=text]:focus {
+    outline:2px hsl(50, 60%, 60%) solid;
+    transition: 0.3s;
+}
+
+#top-panel button{
+    border: none;
+    background-color: transparent;
+    margin-left: -2rem;
+    background-image: url(../img/search-icon.png);
+    background-size: 15px 15px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 18px;
+}
+
+#top-panel button:hover{
+    background-image: url(../img/search-icon-hover.png);
+    background-size: 18px 18px;
+    transition: 0.3s;
+}
+
 span.subtitle{
     display: block;
-    font-size: 20px;
+    font-size: 1.9rem;
     color: hsl(50, 60%, 80%);
 }
 
+span.subtitle::before, span.subtitle::after{
+    margin: 0 2.3rem;
+    display: inline-block;
+    width:15%;
+    height: 10px;
+    content: "";
+    border-top: 0.2rem hsl(50, 60%, 80%) solid;
+}
+
+
+.focus-pane {
+    margin: 0 auto;
+    width: 60%;
+    min-width: 46.9rem;
+    max-width: 60.9rem;
+    height: 100%;
+    min-height: 100vh;
+    background-color: hsl(0,0%,20%);
+    box-shadow: 0 0 10px 2px;
+    padding: 0.5rem 2.3rem;
+    background-image: url(../img/stone-bg.jpg);
+    background-size: auto;
+}
+
+.focus-pane #point-ref-1{
+    position: relative;
+    top:-80px;
+    left: -370px;
+}
+.focus-pane #point-ref-2{
+    position: relative;
+    top:300px;
+    left: 230px;
+}
+
+#point-ref-1 img{
+    position: absolute;
+    rotate: -30deg;
+}
+
+#point-ref-2 img{
+    position: absolute;
+    rotate: -30deg;
+}
+
+
 .content, .decor-border, .recipe-list {
     text-align: center;
-    padding: 15px;
+    padding: 1.4rem;
     border-radius: 10px;
 }
 
 .content {
     background-color: hsl(0,0%,80%);
     margin: 0px auto;
-    width: 60%;
+    width: 40%;
+    min-width: 35.2rem;
 }
 
 .decor-border{
+    box-shadow: 0 4px 5px 2px hsla(0, 0%, 0%, 30%);
+    font-size: 1.2rem;
     background-color: hsl(0,0%,90%);
     border: hsl(120, 40%, 60%) 5px solid;
+    word-wrap: break-word;
+}
+
+.decor-border p{
+    margin: 0rem;
 }
 
 .recipe-list{
     text-align: left;
-    padding: 10px 25px;
-    background-color: hsl(50, 60%, 70%);
+    padding: 10px 15px;
+    background-color: hsl(120, 50%, 70%);
 }
 
-.recipe-list li{
-    border-bottom: black 1px dashed;
+.recipe-list hr{
+    margin:3px 0;
+    border-color: hsl(0,0%,90%);
+}
+
+
+.recipe-list li {
+    list-style-position: inside;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.recipe-list li:hover {
+    background-color: hsl(50, 60%, 60%);
+    box-shadow: 0 4px 5px 2px hsla(0, 0%, 0%, 30%);
+}
+
+.recipe-list span{
+    float: right;
 }
