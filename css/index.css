@@ -18,23 +18,80 @@ body {
 }
 
 h1 {
-    margin-top: 4rem;
+    margin: 5rem 0 1.7rem 0;
     font-size: 3.5rem;
     text-align: center;
     color: hsl(50, 60%, 60%);
 }
 
+
+.boigah {
+    padding: 1rem;
+    display: inline;
+    width: 3.5rem;
+    float: left;
+}
+
+.boigah input[type=checkbox]{
+    display: none;
+}
+
+.boigah .top, .boigah .bot{
+    position: relative;
+    top: 0;
+}
+
+.boigah:has(input[type=checkbox]:checked) .top{
+    animation: topAnim 0.6s forwards;
+}
+.boigah:has(input[type=checkbox]:checked) .mid{
+    visibility: hidden;
+    transition: 0.3s;
+}
+.boigah:has(input[type=checkbox]:checked) .bot{
+    animation: botAnim 0.6s forwards;
+}
+
+@keyframes topAnim{
+    0%{
+        top: 0;
+    }
+    50%{
+        rotate: 0deg;
+        top: 0.6rem;
+    }
+    100%{
+        rotate: -45deg;
+        top: 0.6rem;
+    }
+}
+@keyframes botAnim{
+    0%{
+        top: 0;
+    }
+    50%{
+        rotate: 0deg;
+        top: -0.6rem;
+    }
+    100%{
+        rotate: 45deg;
+        top: -0.6rem;
+    }
+}
+
+
+
 #top-panel{
+    vertical-align: middle;
     z-index: 99;
     width: 100%;
     position: fixed;
-    text-align: center;
-    padding: 1rem 0;
     background-color: hsl(0,0%,10%);
 }
 
 #top-panel input[type=text]{
-    padding: 0.5rem 1rem;
+    vertical-align: middle;
+    padding: 0.5rem 2rem 0.5rem 1rem;
     color: hsl(50, 100%, 66%);
     background-color: hsl(0,0%,20%);
     border: 2px hsl(0,0%,40%) solid;
@@ -43,20 +100,22 @@ h1 {
     max-width: 400px;
     height: 2.5rem;
     caret-color: hsl(0,0%,40%);
+    margin: 1rem 0 1rem 1rem;
 }
 
 #top-panel input[type=text]:focus {
     outline:2px hsl(50, 60%, 60%) solid;
-    transition: 0.3s;
 }
 
 #top-panel button{
+    vertical-align: middle;
+    display: inline-block;
     border: none;
     background-color: transparent;
     margin-left: -2rem;
     background-image: url(../img/search-icon.png);
     background-size: 15px 15px;
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
     height: 18px;
     width: 18px;
@@ -66,6 +125,29 @@ h1 {
     background-image: url(../img/search-icon-hover.png);
     background-size: 18px 18px;
     transition: 0.3s;
+}
+
+#profile, #profile img, #profile p{
+    display: inline-block;
+}
+
+#profile {
+    vertical-align: middle;
+    color: hsl(0,0%,80%);
+    background-color: hsl(0,0%,30%);
+    display: flex;
+    align-items: center;
+    gap: 0 1em;
+    height: 100%;
+    padding: 0.7rem 1rem;
+    float: right;
+    max-width: 30%;
+}
+
+
+#profile:hover {
+    background-color: hsl(120, 22%, 30%);
+    transition: 0.5s;
 }
 
 span.subtitle{
