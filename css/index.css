@@ -32,48 +32,59 @@ h1 {
     float: left;
 }
 
-.boigah input[type=checkbox]{
-    display: none;
-}
-
 .boigah .top, .boigah .bot{
     position: relative;
-    width: 1.5rem;
-    top: 0;
 }
 
-.boigah:has(input[type=checkbox]:checked) .top{
-    animation: topAnim 1.6s forwards;
+.boigah.open .top{
+    animation: topAnim_open 0.8s forwards;
 }
-.boigah:has(input[type=checkbox]:checked) .mid{
-    animation: midAnim 1.6s forwards;
+.boigah.open .mid{
+    animation: midAnim_open 0.8s forwards;
 }
-.boigah:has(input[type=checkbox]:checked) .bot{
-    animation: botAnim 1.6s forwards;
+.boigah.open .bot{
+    animation: botAnim_open 0.8s forwards;
 }
 
-@keyframes topAnim{
+.boigah.close .top{
+    animation: topAnim_close 0.8s forwards;
+}
+.boigah.close .mid{
+    animation: midAnim_close 0.8s forwards;
+}
+.boigah.close .bot{
+    animation: botAnim_close 0.8s forwards;
+}
+
+@keyframes topAnim_open{
     0%{
         rotate: 0deg;
         top: 0;
         width: 1.5rem;
     }
-    25%{
+    50%{
         rotate: 0deg;
         top: 0.6rem;
         width: 1.5rem;
     }
-    50%{
+    100%{
         rotate: -45deg;
         top: 0.6rem;
         width: 1.5rem;
     }
-    65%{
+}
+@keyframes topAnim_close{
+    0%{
+        rotate: -45deg;
+        top: 0.6rem;
+        width: 1.5rem;
+    }
+    30%{
         rotate: -45deg;
         top: 0.6rem;
         width: 0.1rem;
     }
-    80%{
+    60%{
         rotate: 0deg;
         top: 0rem;
         width: 0.1rem;
@@ -84,45 +95,61 @@ h1 {
         width: 1.5rem;
     }
 }
-@keyframes midAnim{
+
+
+@keyframes midAnim_open{
     0%{
         width: 1.5rem;
     }
-    25%{
+    50%{
         width: 1.5rem;
     }
-    50%{
+    100%{
         width: 0.1rem;
     }
-    80%{
+}
+@keyframes midAnim_close{
+    0%{
+        width: 0.1rem;
+    }
+    50%{
         width: 0.1rem;
     }
     100%{
         width: 1.5rem;
     }
 }
-@keyframes botAnim{
+
+
+@keyframes botAnim_open{
     0%{
         rotate: 0deg;
         top: 0;
         width: 1.5rem;
     }
-    25%{
+    50%{
         rotate: 0deg;
         top: -0.6rem;
         width: 1.5rem;
     }
-    50%{
+    100%{
         rotate: 45deg;
         top: -0.6rem;
         width: 1.5rem;
     }
-    65%{
+}
+@keyframes botAnim_close{
+    0%{
+        rotate: 45deg;
+        top: -0.6rem;
+        width: 1.5rem;
+    }
+    30%{
         rotate: 45deg;
         top: -0.6rem;
         width: 0.1rem;
     }
-    80%{
+    60%{
         rotate: 0deg;
         top: 0rem;
         width: 0.1rem;
