@@ -26,10 +26,16 @@ h1 {
 
 
 .boigah {
+    height: 100%;
     padding: 1rem;
     display: inline;
     width: 3.5rem;
     float: left;
+    transition: 0.3s;
+}
+
+.boigah:hover {
+    background-color: hsl(0, 0%, 25%);
 }
 
 .boigah .top, .boigah .bot{
@@ -112,7 +118,7 @@ h1 {
     0%{
         width: 0.1rem;
     }
-    50%{
+    60%{
         width: 0.1rem;
     }
     100%{
@@ -161,6 +167,31 @@ h1 {
     }
 }
 
+#hamburger-menu{
+    z-index: 98;
+    color: hsl(0,0%, 50%);
+    padding: 4rem 0rem 1rem 0rem;
+    position: fixed;
+    left: -200px;
+    background-color: hsl(0, 0%, 10%);
+    width: 200px;
+    height: 100%;
+    transition: 0.8s;
+}
+
+#hamburger-menu ul{
+    padding-left: 0px;
+}
+#hamburger-menu li{
+    list-style-type: none;
+    width: 100%;
+    list-style-position: inside;
+    padding: 1rem;
+    transition: 0.3s;
+}
+#hamburger-menu li:hover{
+    background-color: hsl(0, 0%, 30%);
+}
 
 
 #top-panel{
