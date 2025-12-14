@@ -4,37 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Recipes</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/recipe-pages.css">
 </head>
 <body>
-    <a href="../index.html">Home</a>
-    <h1>Greek Salad</h1>
-    <img src="../img/greek-salad.webp" alt="a fresh and appetizingly-colorful greek salad" width="200" height="150">
+    <div id="hamburger-menu">
+            <ul>
+                <a href="../index.html"><li>Home</li></a>
+                <li>About</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div id="top-panel">
 
-    <h2>Description</h2>
-    <p>This Greek salad is a delicious combination of romaine lettuce, sliced cucumbers, chopped tomatoes, pitted black olives (or Kalamata olives), red and green bell peppers, a red onion, and feta cheese. The dressing is a simple mixture of olive oil, a juiced lemon, dried oregano, and ground black pepper. </p>
-    
-    <h2>Ingredients</h2>
-    <ul>
-        <li>1 head romaine lettuce- rinsed, dried and chopped</li>
-        <li>1 cucumber, sliced</li>
-        <li>2 large tomatoes, chopped</li>
-        <li>1 (6 ounce) can pitted black olives</li>
-        <li>1 green bell pepper, chopped</li>
-        <li>1 red bell pepper, chopped</li>
-        <li>1 red onion, thinly sliced</li>
-        <li>1 cup crumbled feta cheese</li>
-        <li>6 tablespoons olive oil</li>
-        <li>1 lemon, juiced</li>
-        <li>1 teaspoon dried oregano</li>
-        <li>ground black pepper to taste</li>
-    </ul>
+            <div class="boigah close" id="boigah" onclick="borgir()">
+                <hr class="top">
+                <hr class="mid">
+                <hr class="bot">
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search up a recipe..." />
+                <button></button>
+            </div>
 
-    <h2>Steps</h2>
-    <ol>
-        <li>Combine romaine, cucumber, tomatoes, olives, bell peppers, and red onion in a large bowl; sprinkle with feta cheese.</li>
-        <li>Whisk olive oil, lemon juice, oregano, and black pepper together in a small bowl. Pour dressing over salad, toss well to combine, and serve.</li>
-        <li>Pour dressing over salad, toss well to combine, and serve.</li>
-    </ol>
+            <div class="buffer-left"></div>
+            <img class="logo" src="../img/logo_3.png" alt="logo of odin recipes" width="70px" height="70px" />
+            <div class="buffer-right"></div>
+            <div id="profile">
+                <img src="../img/pfp.png" alt="user profile image" width="40px" height="40px"/>
+                <p>Abrar Ur Alam</p>
+            </div>
+        </div>
+        <div class="focus-pane">
+            <h1> Greek Salad <span class="subtitle">For Beginners</span></h1>
+            
+            <img class="recipe-image" src="../img/greek-salad.webp" alt="a fresh and appetizingly-colorful greek salad" width="400" height="300">
+
+            <div class="content">
+            <div id="point-ref-1"><img src="../img/yogurt-bowl-icon.webp" alt="a yogurt bowl icon" width="170"></div>
+            <div class="decor-border" style="padding-top: 0px;">
+                <h2>Description</h2>
+                <p>This Greek salad is a delicious combination of romaine lettuce, sliced cucumbers, chopped tomatoes, pitted black olives (or Kalamata olives), red and green bell peppers, a red onion, and feta cheese. The dressing is a simple mixture of olive oil, a juiced lemon, dried oregano, and ground black pepper. </p>
+                <h2>Ingredients</h2>
+                <ul class="recipe-list">
+                    <li> romaine lettuce- rinsed, dried and chopped <span>1 piece</span></li>
+                    <hr>
+                    <li> cucumber, sliced <span>1 piece</span></li>
+                    <hr>
+                    <li> large tomatoes, chopped <span>2 piece</span></li>
+                    <hr>
+                    <li> pitted black olives <span>1 can (6 ounce)</span></li>
+                    <hr>
+                    <li> green bell pepper, chopped <span>1 piece</span></li>
+                    <hr>
+                    <li> red bell pepper, chopped <span>1 piece</span></li>
+                    <hr>
+                    <li> red onion, thinly sliced <span>1 piece</span></li>
+                    <hr>
+                    <li> crumbled feta cheese <span>1 cup</span></li>
+                    <hr>
+                    <li> olive oil <span>6 tablespoons</span></li>
+                    <hr>
+                    <li> lemon, juiced <span>1 piece</span></li>
+                    <hr>
+                    <li> dried oregano <span>1 teaspoon</span></li>
+                    <hr>
+                    <li>ground black pepper to taste <span></span></li>
+                </ul>
+                
+                <h2>Steps</h2>
+                <ol class="recipe-list">
+                    <li>Combine romaine, cucumber, tomatoes, olives, bell peppers, and red onion in a large bowl; sprinkle with feta cheese.</li>
+                    <hr>
+                    <li>Whisk olive oil, lemon juice, oregano, and black pepper together in a small bowl. Pour dressing over salad, toss well to combine, and serve.</li>
+                    <hr>
+                    <li>Pour dressing over salad, toss well to combine, and serve.</li>
+                </ol>
+
+
+                <p>That's all folks!</p>
+            </div>
+            <div id="point-ref-2"><img src="../img/chicken-icon.png" alt="a yogurt bowl icon" width="140"></div>
+        </div>
+        </div>
 
 </body>
+<script src="../js/index.js"></script>
 </html>
